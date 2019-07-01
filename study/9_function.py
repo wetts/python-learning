@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
+
 # Python的函数定义非常简单，但灵活度却非常大。除了正常定义的必选参数外，还可以使用默认参数、可变参数和关键字参数，使得函数定义出来的接口，不但能处理复杂的参数，还可以简化调用者的代码。
 
 # !/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 # 求绝对值的函数abs
 print(abs(-3))
@@ -74,22 +75,22 @@ def enroll(name, gender, age=6, city='Beijing'):
 enroll('Adam', 'M', city='Tianjin')
 
 # 默认参数必须指向不变对象！
-def add_end(L=[]):
+def add_end1(L=[]):
     L.append('END')
     return L
 
 # Python函数在定义的时候，默认参数L的值就被计算出来了，即[]，因为默认参数L也是一个变量，它指向对象[]，每次调用该函数，如果改变了L的内容，则下次调用时，默认参数的内容就变了，不再是函数定义时的[]了。
-print(add_end())
-print(add_end())
+print(add_end1())
+print(add_end1())
 
-def add_end(L=None):
+def add_end2(L=None):
     if L is None:
         L = []
     L.append('END')
     return L
 
-print(add_end())
-print(add_end())
+print(add_end2())
+print(add_end2())
 
 ########### 可变参数
 def calc(*numbers):
@@ -114,22 +115,22 @@ person('Jack', 24, **extra)
 
 ########### 命名关键字参数
 # 只接收city和job作为关键字参数
-def person(name, age, *, city, job):
+def person1(name, age, *, city, job):
     print(name, age, city, job)
 
-person('Jack', 24, city='Beijing', job='Engineer')
+person1('Jack', 24, city='Beijing', job='Engineer')
 
 # 如果函数定义中已经有了一个可变参数，后面跟着的命名关键字参数就不再需要一个特殊分隔符*了：
-def person(name, age, *args, city, job):
+def person2(name, age, *args, city, job):
     print(name, age, args, city, job)
 
-person('Jack', 24, 'Beijing', 'Engineer')
+person2('Jack', 24, city='Beijing', job='Engineer')
 
 # 命名关键字参数可以有缺省值
-def person(name, age, *, city='Beijing', job):
+def person3(name, age, *, city='Beijing', job):
     print(name, age, city, job)
 
-person('Jack', 24, job='Engineer')
+person3('Jack', 24, job='Engineer')
 
 ############ 参数组合
 def f1(a, b, c=0, *args, **kw):

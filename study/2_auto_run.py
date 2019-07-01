@@ -1,4 +1,5 @@
-# 加上如下配置, 在控制台./2_auto_run.pyjiu能执行
+# -*- coding:UTF-8 -*-
+# 加上如下配置, 在控制台./2_auto_run.py就能执行
 #!/usr/bin/env python3
 
 print('hello, world')

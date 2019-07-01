@@ -1,8 +1,8 @@
+# -*- coding: utf-8 -*-
 # dict的key必须是不可变对象
 # 因为dict根据key来计算value的存储位置，如果每次计算相同的key得出的结果不同，那dict内部就完全混乱了。这个通过key计算位置的算法称为哈希算法（Hash）。
 
 # !/usr/bin/env python3
-# -*- coding: utf-8 -*-
 
 # dict
 # Python内置了字典：dict的支持，dict全称dictionary，在其他语言中也称为map，使用键-值（key-value）存储，具有极快的查找速度。
