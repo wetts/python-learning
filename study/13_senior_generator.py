@@ -5,7 +5,8 @@
 # !/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# 创建L和g的区别仅在于最外层的[]和()，L是一个list，而g是一个generator
+# 创建L和generator的区别仅在于最外层的[]和()，L是一个list，而g是一个generator
+L = [x * x for x in range(10)]
 generator = (x * x for x in range(10))
 print(generator)
 print(next(generator))
