@@ -21,6 +21,10 @@ print(d.get('Thomas', -1))
 # 要删除一个key，用pop(key)方法，对应的value也会从dict中删除：
 print(d.pop('Bob'))
 
+dd = {'a': {'aa': 3, 'bb': {'aa': 5}}}
+(k, v), = dd.items()
+print(k, v)
+
 print("#####################")
 #####################
 # set
