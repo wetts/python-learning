@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# %%
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -12,7 +12,7 @@ print(b)
 print(c)
 print(d)
 print(c[1:3])
-
+# %%
 aa = np.array([[11, 12, 13, 14, 15],
                [16, 17, 18, 19, 20],
                [21, 22, 23, 24, 25],
@@ -42,8 +42,8 @@ print(np.where(aa >= 24))
 print(np.where(aa >= 4, 3, 4))
 print(aa[aa > 29])
 
-print(aa.sum(axis = 0))
-print(aa.sum(axis = 1))
+print(aa.sum(axis=0))
+print(aa.sum(axis=1))
 print(aa.sum())
 print(aa.min())
 print(aa.max())
