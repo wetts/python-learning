@@ -17,7 +17,7 @@ def order_detail(req, order_id):
     weight = None
     buy_time = None
 
-    url_base = "https://www.doorzo.com/?n=Sig.Front.User.Order.DetailPage&Id="
+    url_base = "https://www.doorzo.net/?n=Sig.Front.User.Order.DetailPage&Id="
     h = req.get(url_base + order_id)
     soup = BeautifulSoup(h.text, "html.parser")
     base_data_list = soup.find(
@@ -129,7 +129,7 @@ def order_detail(req, order_id):
 
 
 def order_list(req, page_no):
-    url_base = "https://www.doorzo.com/?Status=%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C&n=Sig.Front.User.Order.ListPage&Page="
+    url_base = "https://www.doorzo.net/?Status=%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C&n=Sig.Front.User.Order.ListPage&Page="
     h = req.get(url_base + page_no)
 
 
@@ -195,8 +195,8 @@ class order_item():
 
 
 if __name__ == '__main__':
-    url0 = "https://www.doorzo.com/?n=Sig.Front.Front.LoginAction"
-    url1 = "https://www.doorzo.com/?n=Sig.Front.User.Order.ListPage&Status=%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C&Page=2"
+    url0 = "https://www.doorzo.net/?n=Sig.Front.Front.LoginAction"
+    url1 = "https://www.doorzo.net/?n=Sig.Front.User.Order.ListPage&Status=%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C&Page=2"
     data = {'Email': "zhang.wetts@163.com",
             'Password': 'z87313141z'}
     # 进行登录，并保存cookie

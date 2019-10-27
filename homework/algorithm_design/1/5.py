@@ -34,4 +34,4 @@ def conflict(pos: int, tmp: list):
 if __name__ == "__main__":
     l = queens()
     print(l)
-    print(len(l))
+    print('有 %d 种方法' % len(l))
