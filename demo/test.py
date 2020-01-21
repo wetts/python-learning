@@ -19,8 +19,8 @@ import json
 test_modle = 'zs_test'
 
 url0 = "http://aqjy.ccnu.edu.cn/LabTest/labtest/getuserInfo"
-data = {'username': "章文松",
-        'password': '2019114069'}
+data = {'username': "刘栋",
+        'password': '2019124097'}
 # 进行登录，并保存cookie
 req = requests.Session()
 response = req.post(url0, data=json.dumps(data))
@@ -49,16 +49,3 @@ sc = {'danxuan_mark': '40', 'duoxuan_mark': '20', 'panduan_mark': '40', 'all_mar
 h2 = {'Content-Type': 'application/json'}
 qd3 = req.post("http://aqjy.ccnu.edu.cn/LabTest/labtest/insert_score", headers=h2, data=json.dumps(sc))
 print(qd3.text)
-
-# qd = req.get("http://aqjy.ccnu.edu.cn/LabTest/labtest/mnTestOrzsTest")
-# soup = BeautifulSoup(qd.text)
-# v = soup.find('input', {"name": "formhash"})["value"]
-# print(v)
-
-# headers = {'content-type': 'charset=utf8'}
-# qd_data = {'formhash': v, 'handlekey': 'sign', 'signsubmit': 'yes',
-#            'moodid': '1', 'content': '记上一笔，hold住我的快乐！'.encode('gbk')}
-# qiandao = req.post(
-#     "http://www.lggzs.com/plugin.php?id=mpage_sign:sign", data=qd_data)
-
-# print(qiandao.text)
